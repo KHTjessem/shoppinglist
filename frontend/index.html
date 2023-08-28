@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Shopping list</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src="./js/main.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/htmlformat.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header><span>Lists</span><span>Items</span></header>
+        
+        <div class="flexCol">        
+            <div id="listPanel" class="panel flex-item-left">
+                <form action="" id="listForm">
+                    <input style="display: none;" type="number" name="listFormIndx" id="formListIndx">
+                    <input style="display: none;" type="number" name="listFormID" id="formListID">
+                    <label for="formListName">Name:</label>
+                    <input type="text" id="formListName">
+                    <label for="formListDesc">Description:</label>
+                    <input type="text" id="formListDesc">
+                </form>
+                <div class="spaceBetween">
+                    <button onclick="handleUpdateList()">Update</button>
+                    <button onclick="createAndSaveList()">Save as new list</button>
+                </div>
+            </div>
+            <div id="itemPanel" class="panel flex-item-right">
+                <form action="">
+                    <input style="display: none;" type="number" name="itemFormIndx" id="formItemIndx">
+                    <input style="display: none;" type="number" name="itemFormID" id="formItemID">
+                    <label for="formItemName">Name:</label>
+                    <input type="text" id="formItemName">
+                    <label for="formItemDesc">Description:</label>
+                    <input type="text" id="formItemDesc">
+
+
+                </form>
+                <div class="spaceBetween">
+                    <button onclick="createAndSaveItem()">Add to list</button>
+                    <button onclick="handleItemUpdate()">Update</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row flexCol">
+            <div id="lists" class="flex-item-left">
+
+                <!-- <div class="border row panel" >
+                    <input class="hide" type="number" name="listID" id="list-numb">
+                    <span class="largetext">1</span>
+                    <div class="flex-item-right flexcent justaround">
+                        <span class="">Pizza</span>
+                        <span class="">
+                            <label for="status">Completed</label>
+                            <input type="checkbox" class="largeCheckbox" name="status" id="">
+                        </span>
+                        <span class="">list description</span>
+                    </div>
+                </div> -->
+                
+            </div>
+        
+
+            <div id="itemView" class="flex-item-right">
+                <!-- <div class="item">Click a list to see its content</div> -->
+                <!-- <div class="row justaround" onclick="">
+                    <span>name</span>
+                    <span>description</span>
+                    <span class="">
+                        <label for="status">Completed</label>
+                        <input type="checkbox" name="status" id="">
+                    </span>
+                    <span class="">
+                        <button>Delete</button>
+                    </span>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
